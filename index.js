@@ -1,7 +1,16 @@
+// Fancy cli
 var inquirer = require('inquirer')
+
+// Command line colorer
 var chalk = require("chalk")
+
+// The output
 var output;
 
+// To copy and paste the output from an external file
+var fs = require("fs")
+
+// inquirer's questions
 var question = [
     {
     type: 'list',
@@ -25,6 +34,8 @@ var question = [
       message: 'What\'s the new word?'
     }
   ]
+
+// inquirer's prompt
 inquirer.prompt(question).then(answers => {
         const bruh = answers['fsent'].split(" ")
     var counts = {}
@@ -47,8 +58,14 @@ inquirer.prompt(question).then(answers => {
             if(!output){
         console.log(chalk.red.bold("Original word not found"))
     } else {
+      fs.writeFile(__dirname + '/output.txt', output, (err) => {
         console.log(chalk.cyan.bold(output))
+        console.log(chalk.red.blue('You can also find the output in the \'output.txt\' file for easier copy + pasting.'))
+        if (err) throw err;
+      });
     }
 }
+
+// excecution of inquirer prompt and full code
     outpu()
   });
