@@ -1,0 +1,23 @@
+{
+  "name": "word-replacer",
+  "version": "1.0.0",
+  "description": "A node based word replacer that doesn't use the replace() function while offering a nice looking UI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quif/word-replacer.git"
+  },
+  "keywords": [
+    "word",
+    "replacer"
+  ],
+  "author": "megaline",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quif/word-replacer/issues"
+  },
+  "homepage": "https://github.com/quif/word-replacer#readme"
+}
