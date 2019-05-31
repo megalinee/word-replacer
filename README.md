@@ -6,4 +6,5 @@
 ## Requirements
 ### You need to install the following npm modules:
 chalk
+
 inquirer
